@@ -160,6 +160,34 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // ======================
+        // Config Antar Jemput
+        // ======================
+        DB::table('config_antar_jemput')->insert([
+            [
+                'max_km' => 5,
+                'biaya' => 15000,
+                'komisi_kurir' => 5000,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'max_km' => 10,
+                'biaya' => 25000,
+                'komisi_kurir' => 8000,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'max_km' => 20,
+                'biaya' => 40000,
+                'komisi_kurir' => 15000,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
+
+
+        // ======================
         // Promo Diskon
         // ======================
         DB::table('promo_diskon')->insert([
