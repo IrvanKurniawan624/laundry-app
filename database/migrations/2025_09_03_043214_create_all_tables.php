@@ -103,6 +103,19 @@ return new class extends Migration
             $table->index('id_kurir');
         });
 
+        // =======================
+        // Config Antar Jemput
+        // =======================
+        Schema::create('config_antar_jemput', function (Blueprint $table) {
+            $table->id('id_config');
+            $table->decimal('jarak_max_km', 5, 2); // batas jarak km (contoh: 5 km)
+            $table->decimal('biaya', 10, 2);       // biaya antar jemput
+            $table->decimal('komisi_kurir', 10, 2); // komisi kurir
+            $table->timestamps();
+            $table->softDeletes();
+        });
+
+
 
         // =======================
         // Notifikasi
