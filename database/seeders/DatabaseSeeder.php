@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
             'notifikasi',
             'detail_pesanan',
             'antar_jemput',
+            'config_antar_jemput',
             'pesanan',
             'tipe_pesanan',
             'jenis_layanan_laundry',
@@ -164,21 +165,21 @@ class DatabaseSeeder extends Seeder
         // ======================
         DB::table('config_antar_jemput')->insert([
             [
-                'max_km' => 5,
+                'jarak_max_km' => 5,
                 'biaya' => 15000,
                 'komisi_kurir' => 5000,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'max_km' => 10,
+                'jarak_max_km' => 10,
                 'biaya' => 25000,
                 'komisi_kurir' => 8000,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'max_km' => 20,
+                'jarak_max_km' => 20,
                 'biaya' => 40000,
                 'komisi_kurir' => 15000,
                 'created_at' => now(),
