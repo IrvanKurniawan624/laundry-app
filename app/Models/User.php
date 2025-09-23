@@ -24,7 +24,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * The attributes that should be hidden for serialization.
+     * The attributes that should be hidden for serialization.pr
      *
      * @var list<string>
      */
@@ -38,11 +38,38 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
+
+    protected $table = 'users';
+    protected $primaryKey = 'id_user';
     protected function casts(): array
     {
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function promoUsage(){
+        return $this->hasMany(PromoUsage::class, 'id_user');
+    }
+
+    public function antarJemput(){
+        return $this->hasMany(AntarJemput::class, 'id_kurir');
+    }
+
+    public function pesananPelanggan() {
+        return $this->hasMany(Pesanan::class, 'id_pelanggan');
+    }
+    public function pesananPetugas()  {
+        return $this->hasMany(pesanan::class, 'id_petugas');
+    }
+    public function notifikasi() {
+        return $this->hasMany(Notifikasi::class, 'id_user');
+    }
+    public function salaryLog(){
+        return $this->hasMany(SalaryLog::class, 'id_petugas');
+    }
+    public function transaksiSnack(){
+        return $this->hasMany(TransaksiSnack::class, 'id_user');
     }
 }
