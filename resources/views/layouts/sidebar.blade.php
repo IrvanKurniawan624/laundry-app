@@ -1,45 +1,47 @@
-<div id="kt_aside" class="aside aside-light aside-hoverable" data-kt-drawer="true"
-    data-kt-drawer-name="aside" data-kt-drawer-activate="{default: true, lg: false}"
-    data-kt-drawer-overlay="true" data-kt-drawer-width="{default:'200px', '300px': '250px'}"
-    data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_aside_mobile_toggle">
-    <div class="aside-logo flex-column-auto" id="kt_aside_logo">
-        <a href="#">
-            <img alt="Logo" src="{{ asset("assets/media/logos/logo_land.svg") }}" class="h-160px logo" />
-        </a>
-        <div id="kt_aside_toggle" class="btn btn-icon w-auto px-0 btn-active-color-primary aside-toggle"
-            data-kt-toggle="true" data-kt-toggle-state="active" data-kt-toggle-target="body"
-            data-kt-toggle-name="aside-minimize">
-            <span class="svg-icon svg-icon-1 rotate-180">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                    fill="none">
-                    <path
-                        d="M11.2657 11.4343L15.45 7.25C15.8642 6.83579 15.8642 6.16421 15.45 5.75C15.0358 5.33579 14.3642 5.33579 13.95 5.75L8.40712 11.2929C8.01659 11.6834 8.01659 12.3166 8.40712 12.7071L13.95 18.25C14.3642 18.6642 15.0358 18.6642 15.45 18.25C15.8642 17.8358 15.8642 17.1642 15.45 16.75L11.2657 12.5657C10.9533 12.2533 10.9533 11.7467 11.2657 11.4343Z"
-                        fill="black" />
-                </svg>
-            </span>
+    <aside class="left-sidebar with-vertical">
+      <div><!-- ---------------------------------- -->
+        <!-- Start Vertical Layout Sidebar -->
+        <!-- ---------------------------------- -->
+        <div class="brand-logo d-flex align-items-center justify-content-between">
+          <a href="../dark/index.html" class="text-nowrap logo-img">
+            <img src="{{ asset("assets/images/logos/logo-dark.svg") }}" class="dark-logo h-80px" alt="Logo-Dark" />
+            <img src="{{ asset("assets/images/logos/logo-light.svg") }}" class="light-logo h-80px" alt="Logo-light" />
+          </a>
+          <a href="javascript:void(0)" class="sidebartoggler ms-auto text-decoration-none fs-5 d-block d-xl-none">
+            <i class="ti ti-x"></i>
+          </a>
         </div>
-    </div>
-    <div class="aside-menu flex-column-fluid">
-        <div class="hover-scroll-overlay-y my-2 py-5 py-lg-8" id="kt_aside_menu_wrapper"
-            data-kt-scroll="true" data-kt-scroll-activate="{default: false, lg: true}"
-            data-kt-scroll-height="auto" data-kt-scroll-dependencies="#kt_aside_logo, #kt_aside_footer"
-            data-kt-scroll-wrappers="#kt_aside_menu" data-kt-scroll-offset="0">
-            <div class="menu menu-column menu-title-gray-800 menu-state-title-primary menu-state-icon-primary menu-state-bullet-primary menu-arrow-gray-500"
-                id="#kt_aside_menu" data-kt-menu="true">
-                <div class="menu-item">
-                    <div class="menu-content pb-2">
-                        <span class="menu-section text-muted text-uppercase fs-8 ls-1">Home</span>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <a class="menu-link active" href="#">
-                        <span class="menu-icon">
-                            <i class="bi bi-grid fs-3"></i>
-                        </span>
-                        <span class="menu-title">Dashboard</span>
-                    </a>
-                </div>
+
+        <nav class="sidebar-nav scroll-sidebar" data-simplebar>
+          <ul id="sidebarnav">
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">Home</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link" href="" id="get-url" aria-expanded="false">
+                <span>
+                  <i class="ti ti-aperture"></i>
+                </span>
+                <span class="hide-menu">Modern</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="fixed-profile p-3 mx-4 mb-2 bg-secondary-subtle rounded mt-3">
+          <div class="hstack gap-3">
+            <div class="john-img">
+              <img src="../assets/images/profile/user-1.jpg" class="rounded-circle" width="40" height="40" alt="user-img" />
             </div>
+            <div class="john-title">
+              <h6 class="mb-0 fs-4 fw-semibold">Mathew</h6>
+              <span class="fs-2">Designer</span>
+            </div>
+            <button class="border-0 bg-transparent text-primary ms-auto" tabindex="0" type="button" aria-label="logout" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="logout">
+              <i class="ti ti-power fs-6"></i>
+            </button>
+          </div>
         </div>
-    </div>
-</div>
+      </div>
+    </aside>
