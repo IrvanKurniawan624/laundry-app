@@ -71,7 +71,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'name' => 'Pelanggan A',
-                'email' => 'pelanggan@example.com',
+                'email' => 'pelanggan.a@example.com',
                 'password' => Hash::make('password'),
                 'role' => 'Pelanggan',
                 'nomor_telepon' => '084444444444',
@@ -300,6 +300,10 @@ class DatabaseSeeder extends Seeder
                 'updated_at' => now(),
             ],
         ]);
+
+        // --- Dummy data tambahan ---
+        $this->call(PelangganSeeder::class);
+        $this->call(PesananSeeder::class);
 
         // ======================
         // Config
